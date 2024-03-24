@@ -1,0 +1,23 @@
+:root {
+  --desktop-intro: url('./assets/bg-intro-desktop.svg');
+  --mobile-intro: url('./assets/bg-intro-mobile.svg');
+  --mockup: url('./assets/image-mockups.png');
+}
+
+html {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+}
+
+/* .background-image::after {
+  content: '';
+  background-image: url('./assets/image-mockups.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+} */

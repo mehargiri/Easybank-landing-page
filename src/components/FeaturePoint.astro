@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets"
+
+interface Props {
+  imgSrc: ImageMetadata
+  imgAlt: string
+  mainPoint: string
+  details: string
+}
+
+const {imgSrc, imgAlt, mainPoint, details} = Astro.props
+---
+<article class="flex flex-col items-center gap-5">
+  <Image src={imgSrc} alt={imgAlt} />
+  <h3 class="text-primary-dark-blue text-lg">{mainPoint}</h3>
+  <p class="text-neutral-grayish-blue text-[0.81rem]">{details}</p>
+</article>
+
+<style>
+
+</style>

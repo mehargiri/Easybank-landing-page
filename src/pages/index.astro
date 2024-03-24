@@ -1,0 +1,18 @@
+---
+import Articles from "../components/Articles.astro"
+import Features from "../components/Features.astro"
+import Footer from "../components/Footer.astro"
+import Header from "../components/Header.astro"
+import Hero from "../components/Hero.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout>
+	<Header />
+	<main>
+		<Hero />
+		<Features />
+		<Articles />
+	</main>
+	<Footer />
+</BaseLayout>

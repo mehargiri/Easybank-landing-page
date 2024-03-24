@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import Close from '../assets/icon-close.svg';
+import Hamburger from '../assets/icon-hamburger.svg';
+import Logo from '../assets/logo.svg';
+---
+<header class="bg-neutral-white sticky top-0 z-10">
+  <div class="wrapper w-[88%] mx-auto py-5 flex justify-between">
+    <Image src={Logo} alt='Easybank Logo' />
+    <nav class="flex">
+      <ul class="hidden">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+      <button type="button" class="">
+        <Image src={Hamburger} alt='Hamburger Icon for opening sub menu' />
+      </button>
+      <button type="button" class="hidden">
+        <Image src={Close} alt='Close Icon for closing sub menu'/>
+      </button>
+      <button type="button" class="hidden">Request Invite</button>
+    </nav>    
+  </div>
+</header>
+
+<style>
+
+</style>

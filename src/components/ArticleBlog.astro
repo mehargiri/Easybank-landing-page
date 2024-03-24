@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets'
+interface Props {
+  imgSrc: ImageMetadata
+  imgAlt: string
+  author: string
+  title: string
+  details: string
+}
+const {imgSrc, imgAlt, author, title, details} = Astro.props
+---
+<article class="bg-neutral-white rounded-md">
+  <Image src={imgSrc} alt={imgAlt} class='rounded-tl-md rounded-tr-md object-cover w-full h-[11rem]' />
+  <div class="text-container p-[1.5rem]">
+    <p class="text-neutral-grayish-blue text-[0.58rem]">By {author}</p>
+    <h3 class="pt-3 text-primary-dark-blue text-sm leading-tight">{title}</h3>
+    <p class="text-neutral-grayish-blue text-[0.72rem] pt-2.5 leading-snug pb-3">{details}</p>
+  </div>
+</article>
+
+<style>
+
+</style>

@@ -1,0 +1,34 @@
+---
+import API from '../assets/icon-api.svg';
+import Budgeting from '../assets/icon-budgeting.svg';
+import Onboarding from '../assets/icon-onboarding.svg';
+import Online from '../assets/icon-online.svg';
+import FeaturePoint from "./FeaturePoint.astro";
+---
+<section class="bg-neutral-light-grayish-blue">
+  <div class="wrapper w-[88%] mx-auto pt-16 text-center">
+  <h2 class="text-primary-dark-blue text-3xl">Why choose Easybank?</h2>
+  <p class="text-neutral-grayish-blue pt-5 text-[0.8rem]">We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
+    <ul class="pt-14 flex flex-col gap-8 pb-16">
+      <li>
+        <FeaturePoint imgSrc={Online} imgAlt="Icon showing different credit cards" mainPoint="Online Banking" details="Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world."/>
+      </li>
+    
+      <li>
+        <FeaturePoint imgSrc={Budgeting} imgAlt="Icon showing mobile with a budgeting app" mainPoint="Simple Budgeting" details="See exactly where your mone goes each month. Receive notifications when you're close to your hitting limits."/>
+      </li>
+    
+      <li>
+        <FeaturePoint imgSrc={Onboarding} imgAlt="Icon showing onboarding between individuals" mainPoint="Fast Onboarding" details="We don't do branches. Open your account in minutes online and start taking control of your finances right away."/>
+      </li>
+    
+      <li>
+        <FeaturePoint imgSrc={API} imgAlt="Icon showing a computer chip" mainPoint="Open API" details="Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier."/>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+
+</style>
