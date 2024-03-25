@@ -204,6 +204,10 @@ button:hover::before {
     padding-left: 0;
   }
 
+  .inside-middle {
+    margin-left: -2.5rem;
+  }
+
   .right {
     padding-right: 0;
   }
@@ -211,19 +215,15 @@ button:hover::before {
 
 @media (min-width: 1440px) {
   .hero-primary-bg {
-    max-width: 1440px;
+    max-width: 1600px;
     background-size: 1100px;
     background-position: left 620px bottom 45%;
   }
 
-  .hero-wrapper {
-    min-height: 500px;
-  }
-
   .hero-secondary-bg::after {
     background-size: 590px;
-    background-position: left 360px top 75%;
+    background-position: left 430px top 75%;
     height: 200%;
-    width: 122%;
+    width: 152%;
   }
 }
