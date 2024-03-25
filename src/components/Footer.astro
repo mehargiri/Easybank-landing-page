@@ -1,47 +1,35 @@
 ---
-import { Image } from "astro:assets";
-import FacebookIcon from '../assets/icon-facebook.svg';
-import InstaIcon from '../assets/icon-instagram.svg';
-import PinterestIcon from '../assets/icon-pinterest.svg';
-import TwitterIcon from '../assets/icon-twitter.svg';
-import YoutubeIcon from '../assets/icon-youtube.svg';
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
 import LogoDark from '../assets/logo-dark.svg';
 ---
-<footer class="bg-primary-dark-blue p-9">
-  <div class="wrapper w-[88%] mx-auto flex flex-col items-center">
-    <div class="left">
-      <div class="left flex flex-col items-center">
+<footer class="bg-primary-dark-blue py-9">
+  <div class="footer-wrapper w-[88%] md:w-full mx-auto grid grid-cols-1 place-items-center md:max-w-[62rem] lg:grid-cols-[1fr_0.35fr]">
+    <div class="outer-left grid grid-cols-1 md:grid-cols-3 md:place-items-center lg:grid-cols-[1fr_0.5fr_1fr]">
+      <div class="inside-left flex flex-col items-center md:items-start justify-center">
         <Image src={LogoDark} alt='Easybank Logo' />
-        <ul class="flex justify-center pt-7 gap-[1.1rem]">
-          <li><Image src={FacebookIcon} alt='Social Media Icon of Facebook' class='scale-[1.2]' /></li>
-          <li><Image src={YoutubeIcon} alt='Social Media Icon of Youtube' class='scale-[1.2]'/></li>
-          <li><Image src={TwitterIcon} alt='Social Media Icon of Twitter' class='scale-[1.2]'/></li>
-          <li><Image src={PinterestIcon} alt='Social Media Icon of Pinterest' class='scale-[1.2]'/></li>
-          <li><Image src={InstaIcon} alt='Social Media Icon of Instagram' class='scale-[1.2]'/></li>
+        <ul class="flex justify-center pt-7 md:pt-9 gap-[1.1rem] md:gap-[0.8rem]">
+          <li><a id="icon" href="#"><Icon name='icon-facebook' class='scale-[1.2] md:scale-100' /></a></li>
+          <li><a id="icon" href="#"><Icon name='icon-youtube' class='scale-[1.2] md:scale-100''/></a></li>
+          <li><a id="icon" href="#"><Icon name='icon-twitter' class='scale-[1.2] md:scale-100 hover:fill-slate-400''/></a></li>
+          <li><a id="icon" href="#"><Icon name="icon-pinterest" class='scale-[1.2] md:scale-100''/></a></li>
+          <li><a id="icon" href="#"><Icon name="icon-instagram" class='scale-[1.2]'/></a></li>
         </ul>
       </div>
-      <div class="middle pt-8">
-        <ul class="text-center text-[0.83rem] font-thin text-neutral-white flex flex-col gap-2.5">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Blog</a></li>
+        <ul class="text-[0.83rem] font-thin text-neutral-white flex flex-col items-center md:items-stretch md:justify-center gap-2.5 pt-8 md:pt-0">
+          <li><a href="#" class="hover:text-primary-lime-green transition-colors">About Us</a></li>
+          <li><a href="#" class="hover:text-primary-lime-green transition-colors">Contact</a></li>
+          <li><a href="#" class="hover:text-primary-lime-green transition-colors">Blog</a></li>
         </ul>
-      </div>
-      <div class="right pt-2.5">
-        <ul class="text-center text-[0.83rem] font-thin text-neutral-white flex flex-col gap-2.5">
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+        <ul class="text-[0.83rem] font-thin text-neutral-white flex flex-col items-center md:items-stretch md:justify-center gap-2.5 pt-2.5 md:pt-0">
+          <li><a href="#" class="hover:text-primary-lime-green transition-colors">Careers</a></li>
+          <li><a href="#" class="hover:text-primary-lime-green transition-colors">Support</a></li>
+          <li><a href="#" class="hover:text-primary-lime-green transition-colors">Privacy Policy</a></li>
         </ul>
-      </div>
     </div>
-    <div class="right text-center pt-[1.82rem]">
-      <button type="button" class="bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan rounded-full text-neutral-white text-[0.81rem] px-[1.82rem] py-2.5">Request invite</button>
+    <div class="right text-center lg:text-right pt-[1.82rem] lg:pt-0 ">
+      <button type="button" class="bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan rounded-full text-neutral-white text-[0.81rem] px-[1.82rem] py-2.5 md:py-2 md:px-[1.6rem] transition-opacity">Request invite</button>
       <p class="text-neutral-grayish-blue pt-[1.3rem] text-[0.81rem]">&copy; Easybank. All rights reserved</p>
     </div>
   </div>
 </footer>
-
-<style>
-
-</style>

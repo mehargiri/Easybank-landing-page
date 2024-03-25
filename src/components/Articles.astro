@@ -6,10 +6,10 @@ import Restaurant from '../assets/image-restaurant.jpg';
 import ArticleBlog from "./ArticleBlog.astro";
 ---
 <section class="bg-neutral-very-light-gray">
-  <div class="w-[88%] mx-auto pt-20 pb-20">
+  <div class="w-[88%] mx-auto pt-20 pb-20 md:max-w-[62rem]">
     <h2 class="text-center text-primary-dark-blue text-[1.6rem]">Latest Articles</h2>
-    <ul class="pt-5 flex flex-col gap-5">
-      <li>
+    <ul class="pt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <li class="">
         <ArticleBlog imgSrc={Currency} imgAlt='Image showing different cash bills' author="Claire Robinson" title="Receive money in any currency with no fees" details="The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money ina single ..." />
       </li>
 
@@ -27,7 +27,3 @@ import ArticleBlog from "./ArticleBlog.astro";
     </ul>
   </div>
 </section>
-
-<style>
-
-</style>

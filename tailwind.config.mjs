@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        mobile: '375px',
+        'custom-md': '850px',
+        'custom-lg': '1440px',
       },
       colors: {
         primary: {
@@ -17,6 +18,9 @@ export default {
           'light-grayish-blue': 'hsl(220, 16%, 96%)',
           'very-light-gray': 'hsl(0, 0%, 98%)',
           white: 'hsl(0, 0%, 100%)',
+        },
+        active: {
+          button: '#82deb4',
         },
       },
       backgroundImage: {

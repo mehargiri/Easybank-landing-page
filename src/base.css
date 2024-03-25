@@ -2,6 +2,9 @@
   --desktop-intro: url('./assets/bg-intro-desktop.svg');
   --mobile-intro: url('./assets/bg-intro-mobile.svg');
   --mockup: url('./assets/image-mockups.png');
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --dark-blue: hsl(233, 26%, 24%);
 }
 
 html {
@@ -12,12 +15,215 @@ html {
 
 body {
   min-width: 320px;
+  overflow-x: hidden;
 }
 
-/* .background-image::after {
+button {
+  position: relative;
+}
+
+button::before {
   content: '';
-  background-image: url('./assets/image-mockups.png');
-  width: 100%;
-  height: 100%;
   position: absolute;
-} */
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+button:hover::before {
+  opacity: 1;
+}
+
+#icon:hover path {
+  fill: var(--lime-green);
+  transition-property: fill;
+  transition-timing-function: ease-in-out;
+  transition-duration: 150ms;
+}
+
+@media (min-width: 768px) {
+  .hero-primary-bg {
+    background-position: left 35vw bottom 35%;
+    background-size: 800px;
+  }
+
+  .hero-secondary-bg::after {
+    background-size: 480px;
+    background-position: left 10vw bottom 145%;
+    height: 250%;
+    width: 200%;
+  }
+
+  .footer-wrapper {
+    justify-items: stretch;
+    align-items: stretch;
+    align-items: stretch;
+  }
+
+  .nav-menu a {
+    position: relative;
+  }
+
+  .nav-menu a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 5px;
+    left: 0;
+    right: 0;
+    bottom: -1.2rem;
+    background: linear-gradient(
+      to right,
+      var(--lime-green),
+      var(--bright-cyan)
+    );
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  .nav-menu a:hover {
+    color: var(--dark-blue);
+  }
+
+  .nav-menu a:hover::after {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 850px) {
+  .hero-primary-bg {
+    background-position: left 40vw bottom 35%;
+    background-size: 900px;
+  }
+
+  .hero-secondary-bg::after {
+    background-size: 480px;
+    background-position: left 10vw bottom 700%;
+    height: 200%;
+    width: 200%;
+  }
+}
+
+@media (min-width: 950px) {
+  .hero-primary-bg {
+    background-position: left 43vw bottom 35%;
+  }
+
+  .hero-secondary-bg::after {
+    background-size: 520px;
+    background-position: left 13vw top 220%;
+    height: 200%;
+    width: 200%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .outer-left {
+    place-items: normal legacy;
+  }
+
+  .inside-left {
+    padding-left: 2.5rem;
+  }
+
+  .right {
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1050px) {
+  .hero-primary-bg {
+    background-size: 1000px;
+    background-position: left 43vw bottom 45%;
+  }
+
+  .hero-secondary-bg::after {
+    background-size: 520px;
+    /* background-position: left 19vw top 220%; */
+    /* background-position: left 200px top 220%; */
+    background-position: left 19vw top 220%;
+    height: 200%;
+    width: 120%;
+  }
+}
+
+/* previous min width 1350 */
+@media (min-width: 1110px) {
+  .hero-primary-bg {
+    background-size: 1100px;
+    background-position: left 43vw bottom 45%;
+  }
+
+  .hero-wrapper {
+    min-height: 480px;
+  }
+
+  .hero-secondary-bg::after {
+    background-size: 550px;
+    background-position: left 22vw top 120%;
+    height: 200%;
+    width: 110%;
+  }
+
+  .hero-point {
+    font-size: 2.5rem;
+  }
+
+  .hero-text {
+    font-size: 0.82rem;
+  }
+
+  .hero-btn {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1230px) {
+  .hero-primary-bg {
+    background-size: 1100px;
+    background-position: left 43vw bottom 45%;
+  }
+
+  .hero-wrapper {
+    min-height: 500px;
+  }
+
+  .hero-secondary-bg::after {
+    background-size: 590px;
+    background-position: left 25vw top 75%;
+    height: 200%;
+    width: 150%;
+  }
+
+  .inside-left {
+    padding-left: 0;
+  }
+
+  .right {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-primary-bg {
+    max-width: 1440px;
+    background-size: 1100px;
+    background-position: left 620px bottom 45%;
+  }
+
+  .hero-wrapper {
+    min-height: 500px;
+  }
+
+  .hero-secondary-bg::after {
+    background-size: 590px;
+    background-position: left 360px top 75%;
+    height: 200%;
+    width: 122%;
+  }
+}

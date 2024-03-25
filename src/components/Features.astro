@@ -6,10 +6,10 @@ import Online from '../assets/icon-online.svg';
 import FeaturePoint from "./FeaturePoint.astro";
 ---
 <section class="bg-neutral-light-grayish-blue">
-  <div class="wrapper w-[88%] mx-auto pt-16 text-center">
+  <div class="wrapper w-[90%] mx-auto pt-16 text-center md:text-left md:max-w-[62rem]">
   <h2 class="text-primary-dark-blue text-3xl">Why choose Easybank?</h2>
-  <p class="text-neutral-grayish-blue pt-5 text-[0.8rem]">We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
-    <ul class="pt-14 flex flex-col gap-8 pb-16">
+  <p class="text-neutral-grayish-blue pt-5 text-[0.8rem] leading-relaxed">We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
+    <ul class="pt-14 grid gap-8 pb-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       <li>
         <FeaturePoint imgSrc={Online} imgAlt="Icon showing different credit cards" mainPoint="Online Banking" details="Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world."/>
       </li>
@@ -28,7 +28,3 @@ import FeaturePoint from "./FeaturePoint.astro";
     </ul>
   </div>
 </section>
-
-<style>
-
-</style>

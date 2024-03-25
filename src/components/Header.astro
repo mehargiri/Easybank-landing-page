@@ -1,31 +1,67 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import Close from '../assets/icon-close.svg';
 import Hamburger from '../assets/icon-hamburger.svg';
 import Logo from '../assets/logo.svg';
 ---
-<header class="bg-neutral-white sticky top-0 z-10">
-  <div class="wrapper w-[88%] mx-auto py-5 flex justify-between">
+<header class=" bg-neutral-white relative z-10">
+  <nav class="flex justify-between items-center py-4 md:py-2.5 w-[88%] mx-auto md:max-w-[62rem]">
     <Image src={Logo} alt='Easybank Logo' />
-    <nav class="flex">
-      <ul class="hidden">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-      <button type="button" class="">
-        <Image src={Hamburger} alt='Hamburger Icon for opening sub menu' />
-      </button>
-      <button type="button" class="hidden">
-        <Image src={Close} alt='Close Icon for closing sub menu'/>
-      </button>
-      <button type="button" class="hidden">Request Invite</button>
-    </nav>    
-  </div>
+    <ul class="nav-menu absolute left-1/2 top-[11.5rem] -translate-x-1/2 -translate-y-1/2 text-center z-10 w-[88%] max-w-[25rem] md:max-w-none rounded-md md:rounded-none flex flex-col gap-4 bg-neutral-white py-6 scale-0 md:scale-100 transition-transform md:py-0 md:bg-none md:w-auto md:static md:translate-x-0 md:translate-y-0 md:flex-row md:gap-7 md:text-neutral-grayish-blue md:text-[0.8rem]">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+    <button type="button" class="hamburger md:hidden">
+      <Image src={Hamburger} alt='Hamburger Icon for opening sub menu' />
+    </button>
+    <button type="button" class="close hidden md:hidden">
+      <Image src={Close} alt='Close Icon for closing sub menu'/>
+    </button>
+    <button type="button" class="hidden md:block bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan rounded-full text-neutral-white text-xs px-7 py-2.5 md:py-2 md:px-[1.6rem] ">Request Invite</button>
+  </nav>
 </header>
 
-<style>
+<script>
+  const hamburgerBtn = document.querySelector('button.hamburger');
+  const closeBtn = document.querySelector('button.close');
 
-</style>
+  const navMenu = document.querySelector('ul.nav-menu');
+
+  const overlay = document.querySelector('div.overlay'); 
+
+  const body = document.querySelector('body');
+
+  const clickHamburger = () => {
+    hamburgerBtn?.classList.remove('block');
+    hamburgerBtn?.classList.add('hidden');
+    closeBtn?.classList.remove('hidden');
+    closeBtn?.classList.add('block');
+    navMenu?.classList.remove('scale-0')
+    navMenu?.classList.add('scale-100');
+    overlay?.classList.remove('-z-10');
+    overlay?.classList.remove('opacity-0');
+    overlay?.classList.add('z-10');
+    overlay?.classList.add('opacity-75');
+    body?.classList.add('overflow-y-hidden');
+  }
+
+  const clickClose = () => {
+    closeBtn?.classList.remove('block');
+    closeBtn?.classList.add('hidden');
+    hamburgerBtn?.classList.remove('hidden');
+    hamburgerBtn?.classList.add('block');
+    navMenu?.classList.remove('scale-100')
+    navMenu?.classList.add('scale-0');
+    overlay?.classList.remove('z-10');
+    overlay?.classList.remove('opacity-75');
+    overlay?.classList.add('-z-10');
+    overlay?.classList.add('opacity-0');
+    body?.classList.remove('overflow-y-hidden');
+  }
+
+  hamburgerBtn?.addEventListener('click', clickHamburger);
+  closeBtn?.addEventListener('click', clickClose);
+</script>
