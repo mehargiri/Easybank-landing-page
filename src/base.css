@@ -39,7 +39,7 @@ button:hover::before {
   opacity: 1;
 }
 
-#icon:hover path {
+.icon:hover path {
   fill: var(--lime-green);
   transition-property: fill;
   transition-timing-function: ease-in-out;
