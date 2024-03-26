@@ -25,14 +25,14 @@ import Logo from '../assets/logo.svg';
 </header>
 
 <script>
-  const hamburgerBtn = document.querySelector('button.hamburger');
-  const closeBtn = document.querySelector('button.close');
+  const hamburgerBtn = document.querySelector<HTMLButtonElement>('button.hamburger');
+  const closeBtn = document.querySelector<HTMLButtonElement>('button.close');
 
-  const navMenu = document.querySelector('ul.nav-menu');
+  const navMenu = document.querySelector<HTMLUListElement>('ul.nav-menu');
 
-  const overlay = document.querySelector('div.overlay'); 
+  const overlay = document.querySelector<HTMLDivElement>('div.overlay'); 
 
-  const body = document.querySelector('body');
+  const body = document.querySelector<HTMLBodyElement>('body');
 
   const clickHamburger = () => {
     hamburgerBtn?.classList.remove('block');
@@ -45,7 +45,7 @@ import Logo from '../assets/logo.svg';
     overlay?.classList.remove('opacity-0');
     overlay?.classList.add('z-10');
     overlay?.classList.add('opacity-75');
-    body?.classList.add('overflow-y-hidden');
+    body?.classList.add('noscroll');
   }
 
   const clickClose = () => {
@@ -59,7 +59,7 @@ import Logo from '../assets/logo.svg';
     overlay?.classList.remove('opacity-75');
     overlay?.classList.add('-z-10');
     overlay?.classList.add('opacity-0');
-    body?.classList.remove('overflow-y-hidden');
+    body?.classList.remove('noscroll');
   }
 
   hamburgerBtn?.addEventListener('click', clickHamburger);
