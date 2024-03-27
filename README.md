@@ -23,8 +23,8 @@ Mobile design can be viewed inside the final-design folder
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My Solution](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN/hub)
+- Live Site URL: [My Live Site](https://mehargiri.github.io/easybank-landing-page/)
 
 ## My process
 
